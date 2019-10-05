@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Messenger.Themes">
+
+    <ControlTemplate x:Key="TextBoxErrorTemplate">
+        <StackPanel>
+            <AdornedElementPlaceholder />
+            <TextBlock Text="{Binding ErrorContent}"
+                       Foreground="#da374c"
+                       Height="32"
+                       Margin="0 6"
+                       FontSize="12"
+                       TextAlignment="Right"
+                       TextWrapping="Wrap"
+                       FontWeight="Regular" />
+        </StackPanel>
+    </ControlTemplate>
+
+</ResourceDictionary>

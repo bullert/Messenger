@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="Messenger.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Messenger.Views"
+             xmlns:components="clr-namespace:Messenger.Themes.Components"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <Grid TextElement.Foreground="#fbf8fb">
+
+        <!--<Border Style="{StaticResource Card}"
+                Background="#222"
+                Width="720"
+                Height="500">
+
+        </Border>-->
+
+        <!--<materialDesign:PackIcon Kind="Send"
+                                 Width="96"
+                                 Height="96"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center">
+            <materialDesign:PackIcon.RenderTransform>
+                <TransformGroup>
+                    <TranslateTransform x:Name="TranslateTransform" />
+                    <ScaleTransform x:Name="ScaleTransform"
+                                    CenterX="48"
+                                    CenterY="48"
+                                    ScaleX="0"
+                                    ScaleY="0" />
+                </TransformGroup>
+            </materialDesign:PackIcon.RenderTransform>
+            <materialDesign:PackIcon.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard Storyboard="{StaticResource LogoAnimation2}" />
+                </EventTrigger>
+            </materialDesign:PackIcon.Triggers>
+        </materialDesign:PackIcon>-->
+
+        <components:Logo />
+
+        <StackPanel Width="280"
+                    VerticalAlignment="Center"
+                    Background="#00ff0000">
+
+            <StackPanel Height="160" />
+
+            <!--<TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     materialDesign:HintAssist.Hint="Email"
+                     VerticalAlignment="Center"
+                     Foreground="#ccc"
+                     materialDesign:TextFieldAssist.UnderlineBrush="#47d0bb"
+                     materialDesign:HintAssist.Foreground="#47d0bb"
+                     materialDesign:HintAssist.FloatingOffset=".77"
+                     materialDesign:ThemeAssist.Theme="Dark"
+                     materialDesign:TextFieldAssist.TextBoxViewMargin="0 4 0 6"
+                     Margin="0 16" />-->
+
+            <!--<TextBox Text="{Binding Email}"
+                     Style="{StaticResource MaterialTextBox}" Margin="0 40" />-->
+            
+            <components:TextBox Text="b.bullert@gmail.com" Offset="88"
+                                Hint="Email"
+                                Background="Red"
+                                Foreground="Black"
+                                Margin="0 0"
+                                Padding="0 5"
+                                CaretBrush="LightSkyBlue"
+                                SelectionBrush="DodgerBlue"
+                                SelectionOpacity=".4"
+                                UnderlineBrush="Red"
+                                UnderlineHighlightBrush="Yellow"
+                                UnderlineFocusBrush="Green"
+                                UnderlineHighlightDuration="0:0:1.0"
+                                UnderlineResizeDuration="0:0:1.2"
+                                 />
+
+            <Grid Margin="0 16">
+
+                <!--<Separator VerticalAlignment="Bottom"
+                           Margin="0" />-->
+
+                <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}"
+                         materialDesign:HintAssist.Hint="Email"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#47d0bb"
+                         materialDesign:HintAssist.Foreground="#47d0bb"
+                         materialDesign:ThemeAssist.Theme="Dark" Background="Red"
+                         materialDesign:TextFieldAssist.TextBoxViewMargin="0 5"
+                         Padding="0 0 0 0">
+                    <TextBox.Style>
+                        <Style BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}"
+                               TargetType="{x:Type TextBox}">
+                            <Setter Property="Validation.ErrorTemplate"
+                                    Value="{StaticResource TextBoxErrorTemplate}" />
+                        </Style>
+                    </TextBox.Style>
+                    <!--<TextBox.RenderTransform>
+                        <TransformGroup>
+                            <TranslateTransform x:Name="TranslateTransform" />
+                        </TransformGroup>
+                    </TextBox.RenderTransform>-->
+                    <TextBox.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource TextBoxAnimation2}" />
+                        </EventTrigger>
+                    </TextBox.Triggers>
+                </TextBox>
+
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform x:Name="TranslateTransform" />
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard Storyboard="{StaticResource TextBoxAnimation}" />
+                    </EventTrigger>
+                </Grid.Triggers>
+            </Grid>
+
+            <PasswordBox materialDesign:HintAssist.Hint="Password"
+                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                         materialDesign:TextFieldAssist.UnderlineBrush="#47d0bb"
+                         materialDesign:HintAssist.Foreground="#47d0bb"
+                         materialDesign:ThemeAssist.Theme="Dark"
+                         Padding="0 0 0 5"
+                         Margin="0 16 0 32" />
+
+            <Button Content="Sign In"
+                    Background="#3d3a4d"
+                    Height="36"
+                    Margin="0 16"
+                    Padding="0 7 0 -5"
+                    Foreground="#ddd"
+                    FontWeight="Normal"
+                    BorderThickness="0"
+                    materialDesign:ThemeAssist.Theme="Dark"
+                    materialDesign:ButtonAssist.CornerRadius="0"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    VerticalContentAlignment="Stretch">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard Storyboard="{StaticResource ToOnHoverColor}" />
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard Storyboard="{StaticResource ToDefaultColor}" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <TextBlock FontSize="13"
+                       Margin="0 96 0 16"
+                       HorizontalAlignment="Center">
+                <Hyperlink TextDecorations="None"
+                           Foreground="#6b687e">
+                    <Span>Dont have an accout?</Span>
+                    <Span FontWeight="SemiBold">Create one</Span>
+                </Hyperlink>
+            </TextBlock>
+
+
+            <!--<materialDesign:TransitioningContent OpeningEffectsOffset="0:0:0.5">
+                <materialDesign:TransitioningContent.OpeningEffects>
+                    <materialDesign:TransitionEffect Kind="SlideInFromBottom" Duration="0:0:0.3" />
+                    <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1.8" />
+                </materialDesign:TransitioningContent.OpeningEffects>
+
+                <Button Content="Sign In"
+                        Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
+                        Margin="0 16"
+                        Background="#47d0bb"
+                        Foreground="#ddd"
+                        FontWeight="Normal"
+                        BorderThickness="0"
+                        materialDesign:ThemeAssist.Theme="Dark"
+                        materialDesign:ButtonAssist.CornerRadius="0"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                        VerticalContentAlignment="Stretch"
+                        Padding="0 5 0 -5" />
+
+            </materialDesign:TransitioningContent>-->
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

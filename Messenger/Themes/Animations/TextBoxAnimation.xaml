@@ -1,0 +1,90 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Messenger.Themes.Animations"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Storyboard x:Key="TextBoxAnimation">
+        
+        <!--<DoubleAnimationUsingKeyFrames Duration="0:0:2.2"
+                                       Storyboard.TargetName="TranslateTransform"
+                                       Storyboard.TargetProperty="Y">-->
+        <DoubleAnimationUsingKeyFrames Duration="0:0:2.2"
+                                       Storyboard.TargetName="TranslateTransform"
+                                       Storyboard.TargetProperty="Y">
+            <DiscreteDoubleKeyFrame Value="200"
+                                    KeyTime="0:0:0.0" />
+            <DiscreteDoubleKeyFrame Value="200"
+                                    KeyTime="0:0:1.4" />
+            <EasingDoubleKeyFrame Value="0"
+                                  KeyTime="Paced">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <BackEase EasingMode="EaseOut" Amplitude=".4" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+
+        <!--<DoubleAnimationUsingKeyFrames Duration="0:0:2.2"
+                                       Storyboard.TargetProperty="Opacity">
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:0.0" />
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:1.6" />
+            <EasingDoubleKeyFrame Value="1"
+                                  KeyTime="Paced">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>-->
+
+        <!--<DoubleAnimationUsingKeyFrames Duration="0:0:2.6"
+                                       Storyboard.TargetName="cc"
+                                       Storyboard.TargetProperty="Opacity">
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:0.0" />
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:2.2" />
+            <EasingDoubleKeyFrame Value="1"
+                                  KeyTime="Paced">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>-->
+
+        <!--<DoubleAnimationUsingKeyFrames Duration="0:0:2.6"
+                                       Storyboard.TargetName="HintOpacity"
+                                       Storyboard.TargetProperty="Value">
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:0.0" />
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:2.2" />
+            <EasingDoubleKeyFrame Value="1"
+                                  KeyTime="Paced">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>-->
+
+    </Storyboard>
+
+    <Storyboard x:Key="TextBoxAnimation2">
+
+        <DoubleAnimationUsingKeyFrames Duration="0:0:3.2"
+                                       Storyboard.TargetProperty="Opacity">
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:0.0" />
+            <DiscreteDoubleKeyFrame Value="0"
+                                    KeyTime="0:0:2.4" />
+            <EasingDoubleKeyFrame Value="1"
+                                  KeyTime="Paced">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CircleEase EasingMode="EaseOut" />
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+
+    </Storyboard>
+
+</ResourceDictionary>
